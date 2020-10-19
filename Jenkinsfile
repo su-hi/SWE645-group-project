@@ -9,7 +9,7 @@ pipeline{
 				script{
 					checkout scm
 					sh 'rm -rf *.war'
-					sh 'jar -cvf HW2.war -C Webcontent/ .'
+					sh 'jar -cvf HW2.war -C WebContent/ .'
 					sh 'echo ${BUILD_TIMESTAMP}'
 					sh "docker login -u khadijakobra -p ${DOCKERHUB_PASS}"
 					def customImage = docker.build("khadijakobra/hw2:${BUILD-TIMESTAMP}")
