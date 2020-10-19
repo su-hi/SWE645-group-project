@@ -1,0 +1,132 @@
+/*
+<!--  
+Khadija Kobra
+G01120432
+Creating a survey form and deploying it to EC2 instance - the CSS source
+-->
+*/
+
+body{
+  background-image: url('gmu.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+p, label, input::placeholder, option{
+  font-size: 13px;
+  font-family: 'Lucida Grande', sans-serif;
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  background: rgb(173, 216, 230, 0.5);
+}
+
+#survey-form{
+  width:60%;
+  background: rgb(149, 194, 222, 0.7);
+  border-radius: 15px;
+  padding-bottom: 10px;
+}
+
+h1, p {
+  text-align: center;
+}
+form{
+  width: 80%;
+  margin: auto;
+}
+
+.form-group{
+  padding: 5px;
+  width: 90%;
+  margin: auto;
+}
+
+label{
+  width: 75%;
+  display: block;
+  margin: auto;
+  padding: 5px;
+}
+
+input{
+  width: 70%;
+  display: block;
+  margin: auto;
+  border-radius: 5px;
+  padding: 12px 20px;
+}
+
+select{
+  width: 75%;
+  display: block;
+  margin: auto;
+  padding: 12px 20px;
+  border-radius: 5px;
+  height: 40px;
+  font-size: 13px;
+  display: block;
+}
+
+input[type='radio'], input[type='checkbox']{
+  width: 20px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+#radioLabel, #checkboxLabel{
+  display: inline;
+}
+
+#recommendation, #improvment{
+  width: 75%;
+  margin: auto;
+}
+
+#recommendationLabel, #improvementLabel{
+  width: 75%;
+  margin: auto;
+  text-align: left;
+  padding:10px;;
+}
+
+textarea{
+  width: 70%;
+  display: block;
+  margin: auto;
+  padding: 12px 20px;
+  height: 150px;
+  resize: vertical;
+  border-radius: 5px;
+}
+
+input[type='submit']{
+  width: 75%;
+  font-size: 13px;
+}
+
+input[type='reset']{
+  width: 75%;
+  font-size: 13px;
+}
+
+@media(max-width: 800px){
+  #survey-form{
+    width: 90%;
+  }
+
+  form{
+    width: 100%;  
+  }
+  
+  .form-group{  
+    width: 100%;
+  }
+  
+}
