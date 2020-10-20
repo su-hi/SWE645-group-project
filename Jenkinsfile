@@ -1,6 +1,3 @@
-/* Submitted by #Taseef Rahman & Mahbubul Alam Palash
-Jenkins file for building application using Docker & Deploying them in Google Kubernete Engine Cluster
-*/
 pipeline{
 	agent any 
 	environment{
@@ -35,12 +32,16 @@ pipeline{
 		}
 	}
 		
-	stage(' Deploying updated image to GKE'){
-		steps{
-			sh ' kubectl set image  deployment/swe645hw2 student=swe645/hw2:${BUILD_ID}.${unique_Id}'
-			
-		}
-
+	stage("Rancher single pod deploy"){
+	         steps{
+	         	sh 'kubectl set image deployment/hw2jenkins-pipeline hw2jenkins-pipeline=khadijakobra/hw2:${BUILD_TIMESTAMP} -n jenkins-pipeline'
+	         }
+	    }
+	
+	stage("With Load Balancer"){
+	   	steps{
+	    	sh 'kubectl set image deployment/hw2-lb hw2-lb=khadijakobra/hw2:${BUILD_TIMESTAMP} -n jenkins-pipeline'
+	    }
 	}
 
 }
