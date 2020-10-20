@@ -34,7 +34,7 @@ pipeline{
 		
 	stage("Rancher single pod deploy"){
 	         steps{
-	         	sh 'kubectl set image deployment/hw2 hw2=khadijakobra/hw2:${BUILD_ID}.${unique_Id}'
+	         	sh 'kubectl set image deployment/hw2 hw2:hw2=khadijakobra/hw2:${BUILD_ID}.${unique_Id}'
 	         }
 	    }
 	
