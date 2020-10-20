@@ -38,11 +38,6 @@ pipeline{
 	         }
 	    }
 	
-	stage("With Load Balancer"){
-	   	steps{
-	    	sh 'kubectl set image deployment/hw2-lb hw2-lb=khadijakobra/hw2:${BUILD_TIMESTAMP} -n hw2'
-	    }
-	}
 
 }
 
