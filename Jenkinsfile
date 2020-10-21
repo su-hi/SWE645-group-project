@@ -1,3 +1,11 @@
+/*  
+Khadija Kobra
+G01120432
+Arnab Debnath
+G01120433
+Jenkinsfile to build and push image to docker and deploying the updated image to the cluster
+*/
+
 pipeline{
 	agent any 
 	environment{
