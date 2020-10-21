@@ -34,7 +34,7 @@ pipeline{
 		
 	stage("Rancher single pod deploy"){
 	         steps{
-	         	sh 'kubectl set image deployment/hw2 hw2=khadijakobra/hw2:hw2 --kubeconfig /var/lib/jenkins/.kube/config -n hw2'
+	         	sh 'kubectl set image deployment/hw2 hw2image=khadijakobra/hw2:hw2 --kubeconfig /var/lib/jenkins/.kube/config -n hw2'
 	         }
 	    }
 	
