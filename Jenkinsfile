@@ -42,7 +42,7 @@ pipeline{
 		
 	stage("Rancher single pod deploy"){
 	         steps{
-	         	#sh 'kubectl set image deployment/hw2image hw2image=khadijakobra/hw2:${BUILD_ID} --kubeconfig /var/lib/jenkins/.kube/config -n hw2'
+	         	//sh 'kubectl set image deployment/hw2image hw2image=khadijakobra/hw2:${BUILD_ID} --kubeconfig /var/lib/jenkins/.kube/config -n hw2'
 	         	sh 'kubectl set image deployment/hw2image hw2image=khadijakobra/hw2:${BUILD_ID} --kubeconfig /var/lib/jenkins/.kube/config --insecure-skip-tls-verify -n hw2' 
 	         }
 	    }
